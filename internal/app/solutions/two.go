@@ -7,8 +7,9 @@ import (
 	"strings"
 )
 
-func DayTwo(input []string) (int, error) {
-	x, y := 0, 0
+func DayTwo(input []string) (int, int, error) {
+	ax, ay := 0, 0
+	bx, by, aim := 0, 0, 0
 
 	for _, s := range input {
 		data := strings.Split(s, " ")
@@ -17,15 +18,19 @@ func DayTwo(input []string) (int, error) {
 
 		switch dir {
 		case "forward":
-			x += delta
+			ax += delta
+			bx += delta
+			by += aim * delta
 		case "up":
-			y -= delta
+			ay -= delta
+			aim -= delta
 		case "down":
-			y += delta
+			ay += delta
+			aim += delta
 		default:
-			return 0, errors.New(fmt.Sprintf("Unrecognized direction %v", dir))
+			return 0, 0, errors.New(fmt.Sprintf("Unrecognized direction %v", dir))
 		}
 	}
 
-	return x * y, nil
+	return ax * ay, bx * by, nil
 }

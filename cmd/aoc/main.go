@@ -38,12 +38,13 @@ func main() {
 		fmt.Printf("Part 1: %v\n", a)
 		fmt.Printf("Part 2: %v\n", b)
 	case "2":
-		solution, err := solutions.DayTwo(input)
+		a, b, err := solutions.DayTwo(input)
 		if err != nil {
 			fmt.Printf("Error finding Day Two solution: %v", err)
 			os.Exit(3)
 		}
-		fmt.Printf("Day 2's solution is: %v\n", solution)
+		fmt.Printf("Part 1: %v\n", a)
+		fmt.Printf("Part 2: %v\n", b)
 	default:
 		fmt.Printf("No solution implemented for challenge %v\n", os.Args[1])
 	}
