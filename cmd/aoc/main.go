@@ -42,7 +42,7 @@ func main() {
 			fmt.Printf("Error finding Day Two solution: %v", err)
 			os.Exit(3)
 		}
-		fmt.Printf("Day 1's solution is: %v\n", solution)
+		fmt.Printf("Day 2's solution is: %v\n", solution)
 	default:
 		fmt.Printf("No solution implemented for challenge %v\n", os.Args[1])
 	}
