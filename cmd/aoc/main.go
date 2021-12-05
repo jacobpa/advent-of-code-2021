@@ -10,7 +10,7 @@ import (
 const usage = `%s CHALLENGE [INPUT]
 
 CHALLENGE    Which day's challenge to complete
-INPUT        Input filename`
+INPUT        Input filename, if not provided reads from STDIN`
 
 func main() {
 	var input []string
