@@ -34,8 +34,9 @@ func main() {
 
 	switch os.Args[1] {
 	case "1":
-		solution := solutions.DayOne(input)
-		fmt.Printf("Day 1's solution is: %v\n", solution)
+		a, b := solutions.DayOne(input)
+		fmt.Printf("Part 1: %v\n", a)
+		fmt.Printf("Part 2: %v\n", b)
 	case "2":
 		solution, err := solutions.DayTwo(input)
 		if err != nil {
