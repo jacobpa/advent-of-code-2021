@@ -19,9 +19,9 @@ func DayTwo(input []string) (int, error) {
 		case "forward":
 			x += delta
 		case "up":
-			y += delta
-		case "down":
 			y -= delta
+		case "down":
+			y += delta
 		default:
 			return 0, errors.New(fmt.Sprintf("Unrecognized direction %v", dir))
 		}

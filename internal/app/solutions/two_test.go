@@ -22,7 +22,7 @@ func TestDayTwoForwardOnly(t *testing.T) {
 
 func TestDayTwoForwardAndUp(t *testing.T) {
 	input := []string{"forward 10", "up 10"}
-	expected := 100
+	expected := -100
 	actual, _ := DayTwo(input)
 	if expected != actual {
 		t.Fatalf("Expected %v, got %v", expected, actual)
